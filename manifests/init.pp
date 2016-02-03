@@ -17,8 +17,7 @@ class elk(
   include yum
 
   class { 'elasticsearch':
-    manage_repo  => true,
-    repo_version => '1.7',
+    package_url => 'https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.2.0/elasticsearch-2.2.0.rpm',
   }
 
   elasticsearch::instance { 'es-01':
