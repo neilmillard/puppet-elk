@@ -1,0 +1,56 @@
+{
+  "name": "neilmillard-elk",
+  "version": "0.1.0",
+  "author": "neilmillard",
+  "summary": "ELK server stack",
+  "license": "MIT",
+  "source": "https://github.com/neilmillard/puppet-elk.git",
+  "project_page": "https://github.com/neilmillard/puppet-elk",
+  "issues_url": "https://github.com/neilmillard/puppet-elk/issues",
+  "tags": [
+    "elk",
+    "kibana",
+    "kibana4",
+    "elasticache"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat"
+    },
+    {
+      "operatingsystem": "CentOS"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.3.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.3"
+    }
+  ],
+  "dependencies": [
+    {
+      "name":"puppetlabs/stdlib",
+      "version_requirement":">= 4.0.0"
+    },
+    {
+      "name":"puppetlabs/java",
+      "version_requirement":">= 1.3.0"
+    },
+    {
+      "name":"elasticsearch/elasticsearch",
+      "version_requirement":">= 0.10.0"
+    },
+    {
+      "name":"elasticsearch/logstash",
+      "version_requirement":">= 0.5.1"
+    },
+    {
+      "name":"lesaux-kibana4",
+      "version_requirement":">= 1.0.3"
+    }
+  ]
+}
