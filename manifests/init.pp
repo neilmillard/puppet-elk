@@ -11,7 +11,7 @@
 # Neil Millard
 #
 class elk(
-) inherits elk:params {
+) inherits elk::params {
 
   require java
 
