@@ -32,13 +32,13 @@ class elk(
     before => Class['::kibana4']
   }
 
-  elasticsearch::plugin{'royrusso/elasticsearch-HQ':
-    instances  => 'es-01'
-  }
+#  elasticsearch::plugin{'royrusso/elasticsearch-HQ':
+#    instances  => 'es-01'
+#  }
 
-  elasticsearch::plugin{'elasticsearch/marvel/latest':
-    instances  => 'es-01'
-  }
+#  elasticsearch::plugin{'elasticsearch/marvel/latest':
+#    instances  => 'es-01'
+#  }
 
 # Logstash
   class { 'logstash':
@@ -59,27 +59,5 @@ class elk(
         }
   }
 
-
-
-#  package { 'curl':
-#    ensure  => 'present',
-#    require => [ Class['yum'] ],
-#  }
-
-#  file { '/opt/kibana':
-#    ensure => 'directory',
-#    group  => 'vagrant',
-#    owner  => 'vagrant',
-#  }
-
-#  exec { 'download_kibana':
-#    command => '/usr/bin/curl -L https://download.elastic.co/kibana/kibana/kibana-4.1.1-linux-x64.tar.gz | /bin/tar xvz -C /opt/kibana --strip-components 1',
-#    require => [ Package['curl'], File['/opt/kibana'], Class['elasticsearch'] ],
-#    timeout => 1800
-#  }
-
-#  exec {'start kibana':
-#      command => '/etc/init.d/kibana start',
-#  }
 
 }
